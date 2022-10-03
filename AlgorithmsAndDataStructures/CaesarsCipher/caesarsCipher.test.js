@@ -17,3 +17,18 @@ test('should decode to the string FREE PIZZA!', () => {
   expect(result).toBe(expected);
 });
 
+test('should decode to the string FREE LOVE?', () => { 
+  const input = 'SERR YBIR?';
+  const expected = 'FREE LOVE?';
+
+  const result = rot13(input);
+  expect(result).toBe(expected);
+});
+
+test('should decode to the string THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.', () => { 
+  const input = 'GUR DHVPX OEBJA SBK WHZCF BIRE GUR YNML QBT.';
+  const expected = 'THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.';
+
+  const result = rot13(input);
+  expect(result).toBe(expected);
+});
