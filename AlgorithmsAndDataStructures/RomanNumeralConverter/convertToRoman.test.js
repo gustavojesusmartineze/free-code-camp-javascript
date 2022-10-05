@@ -40,3 +40,27 @@ test('should return the string XXIX', () => {
   const result = convertToRoman(input);
   expect(result).toBe(expected);
 });
+
+test('should return the string LXXXIII', () => { 
+  const input = 83;
+  const expected = 'LXXXIII';
+
+  const result = convertToRoman(input);
+  expect(result).toBe(expected);
+});
+
+test('should return the string LXXXIII', () => { 
+  const input = 83;
+  const expected = 'LXXXIII';
+
+  const result = convertToRoman(input);
+  expect(result).toBe(expected);
+});
+
+test('should return the string MMMCMXCIX', () => { 
+  const input = 3999;
+  const expected = 'MMMCMXCIX';
+
+  const result = convertToRoman(input);
+  expect(result).toBe(expected);
+});
