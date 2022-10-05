@@ -106,3 +106,62 @@ test('should return {status: "INSUFFICIENT_FUNDS", change: []}', () => {
   const result = checkCashRegister(price, cash, cid);
   expect(result).toStrictEqual(expected);
 });
+
+
+test('should return {status: "INSUFFICIENT_FUNDS", change: []} Case 2', () => {
+  const price = 19.5;
+  const cash = 20;
+  const cid = [
+    ["PENNY", 0.01],
+    ["NICKEL", 0],
+    ["DIME", 0],
+    ["QUARTER", 0],
+    ["ONE", 1], 
+    ["FIVE", 0],
+    ["TEN", 0],
+    ["TWENTY", 0],
+    ["ONE HUNDRED", 0]
+  ];
+
+  const expected = {
+    status: "INSUFFICIENT_FUNDS",
+    change: []
+  };
+
+  const result = checkCashRegister(price, cash, cid);
+  expect(result).toStrictEqual(expected);
+});
+
+test('should return {status: "CLOSED"', () => {
+  const price = 19.5;
+  const cash = 20;
+  const cid = [
+    ["PENNY", 0.5], 
+    ["NICKEL", 0], 
+    ["DIME", 0], 
+    ["QUARTER", 0], 
+    ["ONE", 0], 
+    ["FIVE", 0], 
+    ["TEN", 0], 
+    ["TWENTY", 0], 
+    ["ONE HUNDRED", 0]
+  ];
+
+  const expected = {
+    status: "CLOSED", 
+    change: [
+      ["PENNY", 0.5], 
+      ["NICKEL", 0], 
+      ["DIME", 0], 
+      ["QUARTER", 0], 
+      ["ONE", 0], 
+      ["FIVE", 0], 
+      ["TEN", 0], 
+      ["TWENTY", 0], 
+      ["ONE HUNDRED", 0]
+    ]
+  };
+
+  const result = checkCashRegister(price, cash, cid);
+  expect(result).toStrictEqual(expected);
+});
