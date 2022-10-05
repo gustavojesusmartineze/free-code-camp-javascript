@@ -8,6 +8,9 @@ I'll try to add at least one every week
 **Exercises**
 
 - [Algorithms And Data Structures](/AlgorithmsAndDataStructures/)
+  - [Caesars Cipher](/AlgorithmsAndDataStructures/CaesarsCipher/)
+  - [Roman Numeral Converter](/AlgorithmsAndDataStructures/RomanNumeralConverter/)
+  - [Telephone Number Validator](/AlgorithmsAndDataStructures/TelephoneNumberValidator/)
 
 
 **Tests**
