@@ -64,3 +64,35 @@ test('should return false for "almostomla" string', () => {
   const result = palindrome(input);
   expect(result).toBe(expected);
 });
+
+test('should return true for "My age is 0, 0 si ega ym." string', () => { 
+  const input = 'My age is 0, 0 si ega ym.';
+  const expected = true;
+
+  const result = palindrome(input);
+  expect(result).toBe(expected);
+});
+
+test('should return false for "1 eye for of 1 eye." string', () => { 
+  const input = '1 eye for of 1 eye.';
+  const expected = false;
+
+  const result = palindrome(input);
+  expect(result).toBe(expected);
+});
+
+test('should return true for "0_0 (: /-\ :) 0-0" string', () => { 
+  const input = ' (: /-\ :) 0-0';
+  const expected = true;
+
+  const result = palindrome(input);
+  expect(result).toBe(expected);
+});
+
+test('should return false for "five|\_/|four" string', () => { 
+  const input = 'five|\_/|four';
+  const expected = false;
+
+  const result = palindrome(input);
+  expect(result).toBe(expected);
+});
